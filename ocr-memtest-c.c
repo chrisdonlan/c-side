@@ -32,7 +32,8 @@ int main(int argc, char **argv){
         // analog for python3 conversion from PIL
         struct Pix * pix = pixCreate(r_pix->w, r_pix->h, r_pix->d);
         pixSetData(pix, pix_data);
-        pixEndianByteSwap(pix);
+        struct Pix * pix2 = pixEndianByteSwapNew(pix);
+        pixDestroy(&pix2);
         pixDestroy(&pix);
 
         // free the rest of the cp struct
