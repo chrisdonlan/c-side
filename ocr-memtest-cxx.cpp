@@ -11,7 +11,7 @@ int main(int argc, char * argv)
     auto file = std::string(argv);
 		std::cout << "Image: " << file;
 		if (file.length() == 0) {
-			std::cout << "Usage: <this-exe> <image-file>"
+			std::cout << "Usage: <this-exe> <image-file>";
 			return 1;
 		}
 

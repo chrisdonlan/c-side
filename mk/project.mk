@@ -1,7 +1,8 @@
 std=c++17
 deps=$(shell cat deps)
 
-CXX=c++
+CC=gcc
+CXX=g++
 CXXFLAGS+=-std=$(std)
 CXXFLAGS+=$(shell pkg-config --cflags $(deps))
 CFLAGS+=$(shell pkg-config --cflags $(deps))
