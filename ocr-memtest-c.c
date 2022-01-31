@@ -30,8 +30,7 @@ int main(int argc, char **argv){
 
     for (int i = 0; i < I; i++){
 
-        // Pix seems to delete the data associated with the original pix when it is set to a different pix
-        // so this avoids segfault
+        // loop across construct/destruct process
         struct Pix * r_pix_cp = pixCopy(NULL, r_pix);
 
         l_uint32 * pix_data = pixExtractData(r_pix_cp);
