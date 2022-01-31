@@ -13,7 +13,8 @@ _deps
 
 # compilation files
 *.o
-*.exe
+*-c
+*-cxx
 
 # misc dirs
 foo/
