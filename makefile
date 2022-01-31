@@ -1,5 +1,8 @@
 include mk/project.mk
 include mk/targets.mk
+include mk/runners.mk
 
 run-ocr-memtest-c: ocr-memtest-c
-	./ocr-memtest-c foo/foo.png
+	$(run)$< foo/foo.png
+valgrind-ocr-memtest-c: ocr-memtest-c
+	$(valgrind-memory)$< foo/foo.png
