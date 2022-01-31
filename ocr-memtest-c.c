@@ -36,7 +36,7 @@ int main(int argc, char **argv){
         l_uint32 * pix_data = pixExtractData(r_pix_cp);
 
         // analog for python3 conversion from PIL
-        struct Pix * pix = pixCreate(r_pix->w, r_pix->h, r_pix->d);
+        struct Pix * pix = pixCreateHeader(r_pix->w, r_pix->h, r_pix->d);
         pixSetData(pix, pix_data);
         struct Pix * pix2 = pixEndianByteSwapNew(pix);
 
