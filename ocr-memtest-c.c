@@ -1,9 +1,24 @@
+#include <string.h>
+
 #include "leptonica/allheaders.h"
 
-int main(int argc, char *argv){
+int main(int argc, char **argv){
 
-		printf("image: %s",argv);
-    struct Pix * r_pix = pixRead(argv);
+		if (argc < 2){
+			printf("Usage: <this> <image-file>\n");
+			return 1;
+		}
+
+		char * image = argv[1];
+
+		if (strlen(image) == 0){
+			printf("foo Usage: <this> <image-file>\n");
+			return 1;
+		} else {
+			printf("image: %s\n",argv[1]);
+		}
+
+    struct Pix * r_pix = pixRead(image);
 
 		int I = 100;
     for (int i = 0; i < I; i++){

@@ -1,11 +1,22 @@
+# cmake files
+## minus makefile, as I use that
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
 Testing
-Makefile
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
+
+# compilation files
+*.o
+*.exe
+
+# misc dirs
+foo/
+
+# editor
+*.sw*
