@@ -40,16 +40,10 @@ int main(int argc, char **argv){
         pixSetData(pix, pix_data);
         struct Pix * pix2 = pixEndianByteSwapNew(pix);
 
-        // free the data
-        pixFreeData(pix2);
-        pixFreeData(pix);
-        pixFreeData(r_pix_cp);
-
         // destroy the structs
         pixDestroy(&pix2);
         pixDestroy(&pix);
         pixDestroy(&r_pix_cp);
-        free(pix_data);
 
         // status update
         printf("CYCLE: {%d|%d} complete\n", i + 1, I);
