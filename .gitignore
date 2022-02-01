@@ -19,5 +19,6 @@ _deps
 # misc dirs
 foo/
 
-# editor
+# dev files
 *.sw*
+valgrind*
